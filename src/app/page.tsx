@@ -1,16 +1,17 @@
+// src/app/page.jsx
+'use client';
+
 import React from 'react';
+import HeroSection from '@/components/home/HeroSection';
 
 const HomePage = () => {
-    return (
-        <div className="flex items-center justify-center min-h-screen">
-            <div className="text-center p-8">
-                <h1 className="text-3xl font-bold mb-4">Selamat Datang di Subang Autocomp</h1>
-                <p className="text-gray-600">
-                    Halaman ini sedang dalam pengembangan. Silakan kembali lagi nanti untuk melihat website kami yang lengkap dengan informasi tentang produk dan layanan kami!
-                </p>
-            </div>
-        </div>
-    );
+  return (
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <HeroSection />
+        {/* Additional sections can be added here */}
+    </main>
+  );
 };
 
 export default HomePage;

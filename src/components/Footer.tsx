@@ -164,7 +164,7 @@ export default function Footer() {
                         href={link.href}
                         className="inline-flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors"
                       >
-                        <ChevronRight size={14} className="mr-1.5 text-blue-400" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mr-2.5"></div>
                         {link.label}
                       </Link>
                     </motion.li>
