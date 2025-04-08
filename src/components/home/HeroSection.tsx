@@ -1,4 +1,4 @@
-// src/components/home/HeroSection.jsx
+// src/components/home/HeroSection.tsx
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -52,29 +52,34 @@ const HeroSection = () => {
         <div className="relative min-h-screen">
             {/* Background Slideshow */}
             <div className="absolute inset-0 z-0">
-                {backgroundImages.map((src, index) => (
-                    <div 
-                        key={src}
-                        className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
-                        style={{ 
-                            opacity: index === currentImageIndex ? 1 : 0,
-                            zIndex: index === currentImageIndex ? 1 : 0
-                        }}
-                    >
-                        <Image
-                            src={src}
-                            alt="Factory Background"
-                            fill
-                            priority={index === 0}
-                            className="object-cover"
-                            sizes="100vw"
-                            loading={index === 0 ? "eager" : "lazy"}
-                        />
-                    </div>
-                ))}
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/70 z-10" />
-            </div>
+    {backgroundImages.map((src, index) => (
+        <div 
+            key={src}
+            className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+            style={{ 
+                opacity: index === currentImageIndex ? 1 : 0,
+                zIndex: index === currentImageIndex ? 1 : 0
+            }}
+        >
+            <Image
+                src={src}
+                alt="Factory Background"
+                fill
+                priority={index === 0}
+                className="object-cover"
+                sizes="100vw"
+                loading={index === 0 ? "eager" : "lazy"}
+            />
+        </div>
+    ))}
+
+    {/* Bottom Gradient Overlay */}
+    <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-black/80 z-10 pointer-events-none" />
+
+    {/* Top Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/70 z-10" />
+</div>
+
 
             {/* Main Content */}
             <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 pt-24 pb-16">
@@ -130,21 +135,6 @@ const HeroSection = () => {
                             ))}
                         </div>
                     </div>
-                    
-                    {/* CTA Button - added for better UX */}
-                    <motion.div
-                        className="mt-8 sm:mt-12"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.6, duration: 0.5 }}
-                    >
-                        <a 
-                            href="/tentang"
-                            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200"
-                        >
-                            Pelajari Lebih Lanjut
-                        </a>
-                    </motion.div>
                 </div>
             </div>
         </div>
