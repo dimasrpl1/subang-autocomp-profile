@@ -77,7 +77,8 @@ const HeroSection = () => {
             </div>
 
             {/* Main Content */}
-            <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 py-16">
+            <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 pt-24 pb-16">
+
                 <div className="w-full max-w-6xl mx-auto text-center">
                     {/* Main heading */}
                     <motion.h1 
