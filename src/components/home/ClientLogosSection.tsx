@@ -33,6 +33,7 @@ const ClientLogosSection = () => {
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
           Klien & Partner Kami
         </h2>
+        <div className="w-24 h-1 bg-blue-600 mx-auto mb-6" />
         <p className="text-gray-600 mb-10">
           Dipercaya oleh berbagai brand otomotif ternama di dunia.
         </p>
