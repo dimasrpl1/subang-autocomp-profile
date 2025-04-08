@@ -30,7 +30,7 @@ const AboutUsPreview = () => {
               Didirikan pada tahun 2011, PT Subang Autocomp Indonesia (SUAI) adalah perusahaan manufaktur yang bergerak di bidang perakitan kabel mobil (wiring harness). Kami beroperasi di bawah pengawasan YAZAKI GROUP dan berkomitmen untuk memberikan produk berkualitas tinggi untuk industri otomotif global.
             </p>
             <Link
-              href="/tentang-kami"
+              href="/tentang"
               className="inline-block px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
             >
               Selengkapnya
