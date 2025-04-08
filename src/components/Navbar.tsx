@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navItems = [
@@ -251,7 +251,7 @@ export default function Navbar() {
                         }`}
                       >
                         <span className="mr-2 text-blue-600 opacity-80">
-                          <ChevronRight size={14} />
+                          <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
                         </span>
                         {dropdownItem.label}
                       </Link>
@@ -288,7 +288,7 @@ export default function Navbar() {
             <motion.button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={`lg:hidden p-2.5 rounded-lg z-50 flex items-center justify-center ${
-                mobileMenuOpen ? 'text-gray-700' : scrolled ? 'text-gray-700' : 'text-gray-300'
+                mobileMenuOpen ? 'text-red-600' : scrolled ? 'text-gray-700' : 'text-gray-300'
               }`}
               variants={buttonVariants}
               animate={mobileMenuOpen ? 'open' : 'closed'}
@@ -419,7 +419,7 @@ export default function Navbar() {
                                         transition={{ duration: 0.3, delay: 0.2 + dropdownIndex * 0.1 }}
                                         className="text-blue-600 opacity-80 mr-2"
                                       >
-                                        <ChevronRight size={14} />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
                                       </motion.div>
                                       {dropdownItem.label}
                                     </Link>
