@@ -77,7 +77,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white text-gray-700 shadow-md">
+    <footer className="bg-[#555555] text-white shadow-md">
       <motion.div 
         className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16"
         initial="hidden"
@@ -97,7 +97,7 @@ export default function Footer() {
                 className="hover:opacity-90 transition-opacity"
               />
             </Link>
-            <p className="text-sm leading-relaxed text-gray-600">
+            <p className="text-sm leading-relaxed text-gray-200">
               Kami adalah perusahaan manufaktur otomotif terkemuka yang berkomitmen untuk memberikan solusi berkualitas tinggi bagi industri otomotif Indonesia.
             </p>
             <div className="flex items-center space-x-4 pt-2">
@@ -105,7 +105,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-50 hover:bg-blue-100 text-blue-600 p-2.5 rounded-full transition-colors"
+                className="bg-gray-700 hover:bg-gray-600 text-white p-2.5 rounded-full transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Instagram"
@@ -116,7 +116,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-50 hover:bg-blue-100 text-blue-600 p-2.5 rounded-full transition-colors"
+                className="bg-gray-700 hover:bg-gray-600 text-white p-2.5 rounded-full transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Facebook"
@@ -127,7 +127,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-50 hover:bg-blue-100 text-blue-600 p-2.5 rounded-full transition-colors"
+                className="bg-gray-700 hover:bg-gray-600 text-white p-2.5 rounded-full transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="LinkedIn"
@@ -139,16 +139,16 @@ export default function Footer() {
 
           {/* Quick Links - Collapsible on Mobile */}
           {footerLinks.map((section) => (
-            <motion.div key={section.title} variants={itemVariants} className="border-b md:border-b-0 border-gray-100 pb-4 md:pb-0">
+            <motion.div key={section.title} variants={itemVariants} className="border-b md:border-b-0 border-gray-600 pb-4 md:pb-0">
               <div 
                 className="flex justify-between items-center cursor-pointer md:cursor-default"
                 onClick={() => isMobile && toggleSection(section.title)}
               >
-                <h3 className="text-gray-800 font-medium mb-4 md:mb-6">{section.title}</h3>
+                <h3 className="text-white font-medium mb-4 md:mb-6">{section.title}</h3>
                 {isMobile && (
                   <ChevronRight 
                     size={16} 
-                    className={`transition-transform duration-300 text-blue-500 ${expandedSection === section.title ? 'rotate-90' : ''}`} 
+                    className={`transition-transform duration-300 text-gray-300 ${expandedSection === section.title ? 'rotate-90' : ''}`} 
                   />
                 )}
               </div>
@@ -162,9 +162,9 @@ export default function Footer() {
                     >
                       <Link 
                         href={link.href}
-                        className="inline-flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                        className="inline-flex items-center text-sm text-gray-300 hover:text-white transition-colors"
                       >
-                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mr-2.5"></div>
+                        <div className="w-1.5 h-1.5 rounded-full bg-gray-300 mr-2.5"></div>
                         {link.label}
                       </Link>
                     </motion.li>
@@ -176,34 +176,34 @@ export default function Footer() {
 
           {/* Contact Info */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-gray-800 font-medium mb-4 md:mb-6">Hubungi Kami</h3>
+            <h3 className="text-white font-medium mb-4 md:mb-6">Hubungi Kami</h3>
             <div className="space-y-4">
               <motion.a
                 href="https://goo.gl/maps/your-location"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start text-gray-600 hover:text-blue-600 transition-colors group"
+                className="flex items-start text-gray-300 hover:text-white transition-colors group"
                 whileHover={{ x: 4 }}
               >
-                <MapPin size={18} className="mr-3 flex-shrink-0 mt-0.5 text-blue-500" />
+                <MapPin size={18} className="mr-3 flex-shrink-0 mt-0.5 text-gray-300" />
                 <span className="text-sm leading-relaxed">
                   Jl. Brigjen Katamso No.7, Sukamelang, Kec. Subang, Kabupaten Subang, Jawa Barat 41211
                 </span>
               </motion.a>
               <motion.a
                 href="tel:+6202607777777"
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-300 hover:text-white transition-colors"
                 whileHover={{ x: 4 }}
               >
-                <Phone size={18} className="mr-3 text-blue-500" />
+                <Phone size={18} className="mr-3 text-gray-300" />
                 <span className="text-sm">(0260) 7777777</span>
               </motion.a>
               <motion.a
                 href="mailto:info@subangautocomp.co.id"
-                className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-300 hover:text-white transition-colors"
                 whileHover={{ x: 4 }}
               >
-                <Mail size={18} className="mr-3 text-blue-500" />
+                <Mail size={18} className="mr-3 text-gray-300" />
                 <span className="text-sm">info@subangautocomp.co.id</span>
               </motion.a>
             </div>
@@ -213,7 +213,7 @@ export default function Footer() {
         {/* Copyright */}
         <motion.div 
           variants={itemVariants}
-          className="border-t border-gray-100 mt-12 pt-8 text-sm text-center text-gray-500"
+          className="border-t border-gray-600 mt-12 pt-8 text-sm text-center text-gray-300"
         >
           <p>© {new Date().getFullYear()} Subang Autocomp Indonesia. All rights reserved.</p>
         </motion.div>
