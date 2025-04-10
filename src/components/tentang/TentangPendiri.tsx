@@ -73,7 +73,7 @@ const TentangPendiri = () => {
             </div>
             
             {/* Main bio content */}
-            <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+            <div className="bg-white rounded-lg shadow-md p-6">
               <p className="text-gray-700 leading-relaxed text-lg">
                 Sadami Yazaki mendirikan bisnis wire harness pada usia 21 tahun, dimulai dari usaha kecil seorang diri di Tokyo. Ia dikenal sebagai sosok pekerja keras dan berhati hangat—bukan hanya terhadap karyawan, tapi juga orang-orang biasa yang ia temui dalam hidupnya.
               </p>

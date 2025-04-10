@@ -54,15 +54,12 @@ const ClientLogosSection = () => {
                 alt={client.name}
                 width={100}
                 height={60}
-                className="object-contain grayscale hover:grayscale-0 transition duration-300 ease-in-out"
+                className="object-contain md:grayscale md:hover:grayscale-0 transition duration-300 ease-in-out"
               />
             </motion.div>
           ))}
         </div>
       </div>
-
-      {/* Pembatas bawah */}
-
     </section>
   );
 };
