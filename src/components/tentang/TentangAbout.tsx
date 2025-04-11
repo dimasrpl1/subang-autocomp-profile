@@ -23,7 +23,7 @@ const TentangAbout = () => {
           <div className="lg:col-span-5 relative">
             <div className="relative w-full h-72 sm:h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
               <Image 
-                src="/factory-1.jpg" 
+                src="/gedung-suai1.jpg" 
                 alt="PT Subang Autocomp Indonesia Facility"
                 fill
                 className="object-cover"

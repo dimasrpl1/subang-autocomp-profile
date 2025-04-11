@@ -15,7 +15,7 @@ const AboutUsPreview = () => {
           {/* Gambar di kiri */}
           <div className="w-full md:w-1/2">
             <Image
-              src="/factory-1.jpg"
+              src="/gedung-suai1.jpg"
               alt="Pabrik PT SUAI"
               width={600}
               height={400}

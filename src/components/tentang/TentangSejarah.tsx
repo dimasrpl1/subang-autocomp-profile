@@ -11,7 +11,7 @@ const timelineEvents = [
     title: 'PT SAI Resmi Didirikan',
     description: 'PT SAI didirikan di Subang, Jawa Barat dengan fokus pada manufaktur komponen otomotif berkualitas tinggi. Awalnya beroperasi dengan 50 karyawan dan satu jalur produksi sederhana, perusahaan kami berkomitmen untuk menyediakan solusi wiring harness terbaik untuk industri otomotif Indonesia. Pabrik pertama kami memiliki luas 1500m² dan kapasitas produksi 5000 unit per bulan.',
     icon: '🏭',
-    imagePath: '/factory-1.jpg',
+    imagePath: '/gedung-suai1.jpg',
     imageAlt: 'Pabrik PT SAI pada tahun 2010'
   },
   {
@@ -19,7 +19,7 @@ const timelineEvents = [
     title: 'Ekspansi Pabrik',
     description: 'Untuk memenuhi permintaan yang terus meningkat dari klien otomotif nasional, PT SAI melakukan ekspansi signifikan dengan menambahkan 2 jalur produksi baru. Investasi sebesar Rp 25 miliar ini meningkatkan kapasitas produksi hingga 300% dan menciptakan 120 lapangan kerja baru. Teknologi terbaru diimplementasikan untuk memastikan presisi dan efisiensi maksimal. Ekspansi ini juga mencakup pembangunan fasilitas Quality Control terdepan untuk memastikan standar kualitas tertinggi.',
     icon: '⚙️',
-    imagePath: '/factory-1.jpg',
+    imagePath: '/gedung-suai1.jpg',
     imageAlt: 'Ekspansi pabrik PT SAI tahun 2012'
   },
   {
@@ -27,7 +27,7 @@ const timelineEvents = [
     title: 'Sertifikasi ISO 9001 & ISO/TS 16949',
     description: 'Pencapaian penting dalam komitmen kami terhadap kualitas adalah diperolehnya sertifikasi ISO 9001 dan ISO/TS 16949. Sertifikasi ini mengkonfirmasi bahwa sistem manajemen mutu PT SAI memenuhi standar internasional dan khusus industri otomotif. Proses sertifikasi melibatkan audit menyeluruh, pelatihan staf, dan optimalisasi seluruh alur kerja. Pencapaian ini membuka pintu untuk kolaborasi dengan merek otomotif global dan memperkuat kepercayaan klien terhadap produk kami.',
     icon: '🏆',
-    imagePath: '/factory-1.jpg',
+    imagePath: '/gedung-suai1.jpg',
     imageAlt: 'Seremoni penerimaan sertifikasi ISO'
   },
   {
@@ -35,7 +35,7 @@ const timelineEvents = [
     title: 'Ekspor Perdana ke Asia Tenggara',
     description: 'PT SAI mencapai tonggak bersejarah dengan memulai ekspor perdana ke Malaysia dan Thailand, menandai awal ekspansi internasional kami. Kemitraan strategis dengan produsen otomotif terkemuka di kedua negara ini memungkinkan pengiriman lebih dari 50.000 unit wiring harness dalam tahun pertama. Tim R&D kami mengembangkan varian produk khusus yang memenuhi standar regional dan kondisi iklim lokal. Ekspansi ini meningkatkan pendapatan ekspor sebesar 35% dan memperkuat posisi PT SAI sebagai pemain global di industri komponen otomotif.',
     icon: '🌏',
-    imagePath: '/factory-1.jpg',
+    imagePath: '/gedung-suai1.jpg',
     imageAlt: 'Pengiriman ekspor perdana PT SAI'
   },
   {
@@ -43,7 +43,7 @@ const timelineEvents = [
     title: 'Digitalisasi Proses Produksi',
     description: 'Transformasi digital komprehensif menjadi fokus utama PT SAI di tahun 2024 dengan implementasi sistem ERP dan teknologi IoT mutakhir. Investasi Rp 40 miliar ini mengintegrasikan seluruh aspek produksi, dari pengadaan bahan baku hingga pengiriman produk jadi. Sensor IoT yang dipasang pada semua mesin produksi memungkinkan pemantauan real-time, prediksi pemeliharaan, dan optimalisasi proses. Digitalisasi ini meningkatkan efisiensi produksi sebesar 40%, mengurangi waktu henti hingga 60%, dan menurunkan tingkat cacat produk di bawah 0.5%. Big data analytics juga diimplementasikan untuk mengoptimalkan rantai pasokan dan meningkatkan peramalan permintaan.',
     icon: '💻',
-    imagePath: '/factory-1.jpg',
+    imagePath: '/gedung-suai1.jpg',
     imageAlt: 'Sistem digitalisasi produksi PT SAI'
   }
 ];
