@@ -1,5 +1,3 @@
-// src/app/berita/[id]/page.tsx
-
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
@@ -16,11 +14,13 @@ type Berita = {
   created_at: string;
 };
 
-export default async function BeritaDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
+export default async function BeritaDetailPage({ params }: PageProps) {
   const { id } = params;
 
   const supabase = createServerComponentClient({ cookies });
@@ -167,4 +167,14 @@ export default async function BeritaDetailPage({
       </div>
     </div>
   );
+}
+
+// Tambahan: Generate static params agar build bisa jalan
+export async function generateStaticParams() {
+  const supabase = createServerComponentClient({ cookies });
+  const { data } = await supabase.from('berita').select('id');
+
+  return (data || []).map((berita) => ({
+    id: berita.id,
+  }));
 }
