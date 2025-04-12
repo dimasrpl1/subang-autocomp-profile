@@ -22,13 +22,12 @@ type Berita = {
 };
 
 const BeritaDetailPage = async ({ params }: PageProps) => {
-  // Await params to access its properties safely
-  const { id } = await params;
+  // Access the id directly, don't await params
+  const { id } = params;
 
-  // Don't await cookies() as it returns a value directly, not a Promise
-  const cookieStore = cookies();
+  // Create the Supabase client
   const supabase = createServerComponentClient({
-    cookies: () => cookieStore,
+    cookies
   });
 
   const { data, error } = await supabase
