@@ -21,8 +21,8 @@ type Berita = {
 };
 
 const BeritaDetailPage = async ({ params }: Props) => {
-  // Await params before destructuring
-  const { id } = await params;
+  // Use params directly without awaiting it
+  const { id } = params;
 
   // Create Supabase client with proper cookie handling
   const cookieStore = cookies();
