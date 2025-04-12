@@ -21,9 +21,12 @@ type Berita = {
   created_at: string;
 };
 
-const BeritaDetailPage = async ({ params }: PageProps) => {
-  // Access the id directly, don't await params
+const BeritaDetailPage = async (props: PageProps) => {
+  const { params } = props;
   const { id } = params;
+
+  // ... lanjutkan seperti biasa
+
 
   // Create the Supabase client
   const supabase = createServerComponentClient({
