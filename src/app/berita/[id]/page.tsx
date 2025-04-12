@@ -16,13 +16,11 @@ type Berita = {
   created_at: string;
 };
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default async function BeritaDetailPage({ params }: PageProps) {
+export default async function BeritaDetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const { id } = params;
 
   const supabase = createServerComponentClient({ cookies });
