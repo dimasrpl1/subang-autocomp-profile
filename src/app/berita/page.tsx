@@ -9,18 +9,24 @@ const BeritaPage = async () => {
   const { data: berita, error } = await supabase
     .from('berita')
     .select('id, judul, gambar, created_at')
-    .order('created_at', { ascending: false })
-    .limit(6); // Batasi hanya 6 berita pertama
+    .order('created_at', { ascending: false });
 
   if (error) {
     console.error('Supabase Error:', error);
-    return <div className="text-red-500 text-center py-12">Gagal memuat berita.</div>;
+    return (
+      <div className="text-red-500 text-center py-12">
+        Gagal memuat berita.
+      </div>
+    );
   }
 
   return (
     <div className="bg-white min-h-screen">
+      {/* Section Hero */}
       <BeritaHero />
-      <ClientBeritaList berita={berita} />
+
+      {/* List Berita */}
+      <ClientBeritaList berita={berita || []} />
     </div>
   );
 };
