@@ -6,11 +6,13 @@ import BeritaHero from '@/components/berita/BeritaHero';
 import Link from 'next/link';
 import { CalendarIcon, ArrowLeftIcon } from 'lucide-react';
 
-type Props = {
+// Fix the type definition to match Next.js 15 expectations
+interface PageProps {
   params: {
     id: string;
   };
-};
+  searchParams: Record<string, string | string[] | undefined>;
+}
 
 type Berita = {
   id: string;
@@ -20,8 +22,8 @@ type Berita = {
   created_at: string;
 };
 
-const BeritaDetailPage = async ({ params }: Props) => {
-  // Use params directly without awaiting it
+// Use the correct PageProps interface
+const BeritaDetailPage = async ({ params }: PageProps) => {
   const { id } = params;
 
   // Create Supabase client with proper cookie handling
