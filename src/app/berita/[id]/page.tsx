@@ -16,7 +16,7 @@ type Berita = {
 
 const BeritaDetailPage = async ({ params }: { params: { id: string } }) => {
   // Await the params to ensure we handle the dynamic data properly
-  const { id } = await params;
+  const { id } = params;
 
   // Create Supabase client with proper cookie handling
   const cookieStore = cookies();
