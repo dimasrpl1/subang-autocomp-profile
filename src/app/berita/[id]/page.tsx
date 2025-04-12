@@ -1,3 +1,5 @@
+type Params = Promise<{ id: string }>;
+
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
@@ -5,13 +7,6 @@ import Image from 'next/image';
 import BeritaHero from '@/components/berita/BeritaHero';
 import Link from 'next/link';
 import { CalendarIcon, ArrowLeftIcon } from 'lucide-react';
-
-interface PageProps {
-  params: {
-    id: string;
-  };
-  searchParams: Record<string, string | string[] | undefined>;
-}
 
 type Berita = {
   id: string;
@@ -21,11 +16,9 @@ type Berita = {
   created_at: string;
 };
 
-const BeritaDetailPage = async ({ params }: PageProps) => {
-  // Await params to access its properties safely
+export default async function BeritaDetailPage({ params }: { params: Params }) {
   const { id } = await params;
 
-  // Don't await cookies() as it returns a value directly, not a Promise
   const cookieStore = cookies();
   const supabase = createServerComponentClient({
     cookies: () => cookieStore,
@@ -173,6 +166,4 @@ const BeritaDetailPage = async ({ params }: PageProps) => {
       </div>
     </div>
   );
-};
-
-export default BeritaDetailPage;
+}
