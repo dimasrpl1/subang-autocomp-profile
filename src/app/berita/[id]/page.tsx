@@ -1,3 +1,5 @@
+// src/app/berita/[id]/page.tsx
+
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
@@ -5,7 +7,6 @@ import Image from 'next/image';
 import BeritaHero from '@/components/berita/BeritaHero';
 import Link from 'next/link';
 import { CalendarIcon, ArrowLeftIcon } from 'lucide-react';
-
 
 type Berita = {
   id: string;
@@ -15,19 +16,16 @@ type Berita = {
   created_at: string;
 };
 
-const BeritaDetailPage = async ({ params }: { params: { id: string } }) => {
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
+const BeritaDetailPage = async ({ params }: PageProps) => {
   const { id } = params;
 
-  // lanjutkan
-
-
-  // ... lanjutkan seperti biasa
-
-
-  // Create the Supabase client
-  const supabase = createServerComponentClient({
-    cookies
-  });
+  const supabase = createServerComponentClient({ cookies });
 
   const { data, error } = await supabase
     .from('berita')
