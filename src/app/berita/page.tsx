@@ -4,8 +4,7 @@ import BeritaHero from '@/components/berita/BeritaHero';
 import ClientBeritaList from '@/components/berita/ClientBeritaList';
 
 const BeritaPage = async () => {
-  // Pass cookies() as a function that returns a promise
-  const supabase = createServerComponentClient({ cookies: () => cookies() });
+  const supabase = createServerComponentClient({ cookies });
 
   const { data: berita, error } = await supabase
     .from('berita')
