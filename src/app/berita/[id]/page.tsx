@@ -6,12 +6,6 @@ import BeritaHero from '@/components/berita/BeritaHero';
 import Link from 'next/link';
 import { CalendarIcon, ArrowLeftIcon } from 'lucide-react';
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-  searchParams: Record<string, string | string[] | undefined>;
-}
 
 type Berita = {
   id: string;
@@ -21,9 +15,11 @@ type Berita = {
   created_at: string;
 };
 
-const BeritaDetailPage = async (props: PageProps) => {
-  const { params } = props;
+const BeritaDetailPage = async ({ params }: { params: { id: string } }) => {
   const { id } = params;
+
+  // lanjutkan
+
 
   // ... lanjutkan seperti biasa
 
