@@ -6,6 +6,13 @@ import BeritaHero from '@/components/berita/BeritaHero';
 import Link from 'next/link';
 import { CalendarIcon, ArrowLeftIcon } from 'lucide-react';
 
+interface PageProps {
+  params: {
+    id: string;
+  };
+  searchParams: Record<string, string | string[] | undefined>;
+}
+
 type Berita = {
   id: string;
   judul: string;
@@ -14,16 +21,15 @@ type Berita = {
   created_at: string;
 };
 
-type PageProps = {
-  params: {
-    id: string;
-  };
-};
+const BeritaDetailPage = async ({ params }: PageProps) => {
+  // Await params to access its properties safely
+  const { id } = await params;
 
-export default async function BeritaDetailPage({ params }: PageProps) {
-  const { id } = params;
-
-  const supabase = createServerComponentClient({ cookies });
+  // Don't await cookies() as it returns a value directly, not a Promise
+  const cookieStore = cookies();
+  const supabase = createServerComponentClient({
+    cookies: () => cookieStore,
+  });
 
   const { data, error } = await supabase
     .from('berita')
@@ -167,14 +173,6 @@ export default async function BeritaDetailPage({ params }: PageProps) {
       </div>
     </div>
   );
-}
+};
 
-// Tambahan: Generate static params agar build bisa jalan
-export async function generateStaticParams() {
-  const supabase = createServerComponentClient({ cookies });
-  const { data } = await supabase.from('berita').select('id');
-
-  return (data || []).map((berita) => ({
-    id: berita.id,
-  }));
-}
+export default BeritaDetailPage;
