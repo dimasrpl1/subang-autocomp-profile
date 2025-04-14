@@ -93,6 +93,7 @@ const HeroSection = () => {
                         transition={{ duration: 0.7 }}
                     >
                         PT Subang Autocomp Indonesia
+                        (BUKAN WEBSITE ASLI)
                     </motion.h1>
                     
                     {/* Animated subtitle - height adjusted for better mobile display */}
